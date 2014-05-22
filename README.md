@@ -2,7 +2,7 @@
 ===
 
 
-我使用[Tom Preston-Werner](http://tom.preston-werner.com/)的博客作为模板，站点名称为[San's world](http://hueidou.github.io/)。
+我使用[Tom Preston-Werner](http://tom.preston-werner.com/)的博客作为模板。
 
 许可证
 ===
