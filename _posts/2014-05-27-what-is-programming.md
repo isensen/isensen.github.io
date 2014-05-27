@@ -9,4 +9,6 @@ tags: None
 
 [学会了编程真的可以开发出很多东西吗?](http://www.zhihu.com/question/23844552/answer/25880226?utm_campaign=weekly130&utm_source=weekly-digest&utm_medium=email)
 
+受益匪浅
+
 {% include references.md %}
