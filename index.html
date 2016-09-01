@@ -1,16 +1,126 @@
----
-layout: default
-title: i3342th 
----
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Poker card.</title>
+    
+    
+    
+    		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+        	#canvas{
+					  width:234px;
+					  height:234px;
+					  position:absolute; 
+					  left:43px;
+					  top:110px;
+					
+					  background:transparent;        
+					}
+					.test{
+					  background:#4D4846;
+					  width:9px;
+					  height:9px;
+					  border-collapse:collapse;
+					  display:table-cell;
+					  box-shadow: 1px 1px 5px  black ;
+					}
+					.dinosaur-back{
+					  background:transparent;
+					  width:9px;
+					  height:9px;
+					  border-collapse:collapse;
+					  display:table-cell;
+					}
+        	
+        </style>
+				<script>
+					var a=[
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0], 
+						[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+						[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+						[0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+						[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] 
+						],
+						u=234/26;
+						$(function(){
+						  var $canvas = $('#canvas'),
+						      max = 5,
+						      min = 1,
+						      rand = (Math.floor(Math.random() * max) + min),
+						      colors = ["#F7F7F7", "#F7F7F7", "#D6E685", "#8CC665", "#44A340"];
+						     
+						  
+						  
+						  $.each(a,function(){
+						    var $rowD=$('<div>')
+						    $.each(this,function(){
+						       var $tdD=$('<div>')
+						       if(this == 1)
+						         $tdD.addClass('test')
+						       else
+						         $tdD.addClass('dinosaur-back')
+						       $rowD.append($tdD)
+						    })
+						    $canvas.append($rowD)
+						  })
+						  
+						  $('.test').hover(function(){
+						    $(this).css({'background':colors[Math.floor(Math.random()*colors.length)]})    
+						  },function(){
+						    $(this).css({'background':"#4D4846"}) 
+						  })
+						})
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+				</script>
+    
+    
+    
+  </head>
 
-  <ul class="posts">
-  </ul>
+  <body>
+
+    	<div id="card-container">
+	    <div id="card">
+	        <div class="back"></div>
+	        <div class="front">
+	        	<div class="number">3</div>
+    
+					  <div class="card__body">
+					     <p class="std"></p><br>
+					     <p class="info"></p>
+					     <div id="canvas"  ></div>
+					  </div>
+			 
+	        </div>
+	    </div>
 </div>
+    
+    
+    
+    
+    
+  </body>
+</html>
