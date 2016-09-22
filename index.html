@@ -9,30 +9,7 @@
     		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
         <link rel="stylesheet" href="css/style.css">
         <style>
-        	#canvas{
-					  width:234px;
-					  height:234px;
-					  position:absolute; 
-					  left:43px;
-					  top:110px;
-					
-					  background:transparent;        
-					}
-					.test{
-					  background:#4D4846;
-					  width:9px;
-					  height:9px;
-					  border-collapse:collapse;
-					  display:table-cell;
-					  box-shadow: 1px 1px 5px  black ;
-					}
-					.dinosaur-back{
-					  background:transparent;
-					  width:9px;
-					  height:9px;
-					  border-collapse:collapse;
-					  display:table-cell;
-					}
+        	
         	
         </style>
 				<script>
@@ -92,6 +69,20 @@
 						  },function(){
 						    $(this).css({'background':"#4D4846"}) 
 						  })
+						  
+						  $('#card-container').on('click',function(){
+						  	$(this).toggleClass('clk') 
+
+						  })
+						  
+						  
+						  $('#enter').on('click',function(e){
+						  	e.preventDefault();
+						  	e.stopPropagation();
+						  	window.location.href="index1.html"
+						  })
+						  
+						  
 						})
 
 				</script>
@@ -104,7 +95,11 @@
 
     	<div id="card-container">
 	    <div id="card">
-	        <div class="back"></div>
+	        <div class="back">
+	        	 
+						  <a id="enter" href="#">Enter</a>
+	          
+	        </div>
 	        <div class="front">
 	        	<div class="number">3</div>
     
@@ -116,8 +111,10 @@
 			 
 	        </div>
 	    </div>
+			
+                                 
 </div>
-    
+   
     
     
     

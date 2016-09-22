@@ -55,7 +55,7 @@ ul li {
 	position: absolute;
 	top:10px;
 	font-size:66px;
-	color:black;
+	color:#4D4846;
 }
 
 .front .number:after {
@@ -133,7 +133,8 @@ ul li {
 	display: inline-block;
 }
 
-#card-container:hover .back {
+ 
+#card-container.clk .back {
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: rotateY(0deg);
 	-o-transform: rotateY(0deg);
@@ -141,13 +142,16 @@ ul li {
 	transform: rotateY(0deg);
 }
 
-#card-container:hover .front {
+#card-container.clk .front {
 	-webkit-transform: rotateY(-180deg);
 	-moz-transform: rotateY(-180deg);
 	-o-transform: rotateY(-180deg);
 	-ms-transform: rotateY(-180deg);
 	transform: rotateY(-180deg);
 }
+
+
+ 
 #canvas{
   width:234px;
   height:234px;
@@ -172,3 +176,5 @@ ul li {
   border-collapse:collapse;
   display:table-cell;
 }
+
+#enter{font-size:22px;color:black;font-weight: 900;background:white;position:absolute;bottom:50px;left:125px}
