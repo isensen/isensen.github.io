@@ -8,7 +8,7 @@ tags: None
 {{ page.title }}
 ================
 
-<iframe height="498" width="510" src="http://player.youku.com/embed/XNTI3NDA2Nzk2" frameborder="no" ></iframe>
+[视频地址](http://www.tudou.com/programs/view/vu_y2TzFEp8/)
 
 ## 如果心里有海涛，我想是你在歌唱
 
