@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 树高千丈 落叶帰根
+title: Kaar Deerge Chouvulangning
 tags: None 
 ---
 
@@ -8,9 +8,7 @@ tags: None
 {{ page.title }}
 ================
 
-<iframe height="498" 
-
-width="510" src='https://player.youku.com/embed/XNTI3NDA2Nzk2' frameborder=0 'allowfullscreen'></iframe>
+<iframe height="498" width="510" src="https://player.youku.com/embed/XNTI3NDA2Nzk2" frameborder="0" "allowfullscreen"></iframe>
 
 ### 如果心里有海涛，我想是你在歌唱
 
@@ -21,7 +19,7 @@ width="510" src='https://player.youku.com/embed/XNTI3NDA2Nzk2' frameborder=0 'al
 狮子等待着月亮的呼唤。   
 
 鲸鱼等待着溯流的问候。  
-
+<br/>
 
 
 我在离喀纳斯河谷千里外的土地痴眼望穿。  
@@ -41,7 +39,7 @@ width="510" src='https://player.youku.com/embed/XNTI3NDA2Nzk2' frameborder=0 'al
 是谁偷走了我的倾诉？  
 
 叫我何处去寻你？我梦中的乐土……  
-
+<br/>
 
 
 你用歌声亲吻我的额头。  
@@ -54,31 +52,31 @@ width="510" src='https://player.youku.com/embed/XNTI3NDA2Nzk2' frameborder=0 'al
 
 是赶路的人，总要流血。  
 
-
+<br/>
 
 野火可以融化雪。  
 
 可杀死不了小溪的轻淌。  
 
-
+<br/>
 
 沙漠可以掩埋绿洲。  
 
 可杀死不了艾蒿的芬芳。  
 
-
+<br/>
 
 那些死的病的可以让人步伐迟重。  
 
 但杀死不了前方的鲜明和光亮。  
 
-
+<br/>
 
 如果你抒怀的寄托已倒下。  
 
 请扶起你的热爱。  
 
-
+<br/>
 
 我们的爱匍匐于世间。  
 
